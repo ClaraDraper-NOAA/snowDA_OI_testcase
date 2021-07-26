@@ -1,0 +1,14 @@
+Test case for assimilation of snow depth (GHCN), for comparison to the JEDI LETKF-OI C test. 
+
+To run, 
+in submit_job.sh  change EXEC_DIR to point to directory with your snowOI executable.
+sbatch submit_job_DA_GHCN.sh
+
+To check output: 
+check_diffs_GHCN.sh should not report any differences.
+
+output analysis, together with DA diagnostics are in output/SNOANLOI.tile*.nc files
+-to screen station obs in output file to exclude those not assimilated, exclude stations with -ve stn_jj  (see python reader for example)
+
+
+
